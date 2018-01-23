@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+
+
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://106.15.196.17:3306/shiro?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    show-sql: true
+  redis:
+    host: 106.15.196.17
+    port: 6379
+    database: 0
+    password: root
+logging:
+  level:
+    com.wuyong.*: debug
+
+
+
+---
+spring:
+  profiles: prod
+
