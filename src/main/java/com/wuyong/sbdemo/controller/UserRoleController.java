@@ -27,6 +27,7 @@ public class UserRoleController {
     @RequestMapping("/find_by_username/{username}")
     public UserModel findByUsername(@PathVariable("username") String username) {
         return userService.findUserByUsername(username);
+
     }
 
 
